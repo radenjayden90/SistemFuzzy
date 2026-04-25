@@ -1,7 +1,6 @@
 flask
-scikit-fuzzy
+scikit-fuzzy>=0.5
 numpy
 flask-cors
 scipy
-packaging
 packaging
