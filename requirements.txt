@@ -4,3 +4,4 @@ numpy
 flask-cors
 scipy
 packaging
+networkx
