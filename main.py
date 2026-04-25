@@ -82,5 +82,12 @@ def fuzzy_sleep():
 
     return jsonify({"kualitas_tidur": score, "kategori": kategori})
 
+# Vercel deployment handler
+app.debug = False
+
 if __name__ == '__main__':
     app.run(debug=True)
+
+# Export for Vercel
+def handler(request):
+    return app(request.environ, lambda status, headers: None)
