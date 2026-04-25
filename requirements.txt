@@ -2,3 +2,4 @@ flask
 scikit-fuzzy
 numpy
 flask-cors
+scipy
