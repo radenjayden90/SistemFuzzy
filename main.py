@@ -1,11 +1,21 @@
 import numpy as np
 import skfuzzy as fuzz
 from skfuzzy import control as ctrl
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
+
+# Route untuk halaman utama
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+# Route untuk test page
+@app.route('/test')
+def test():
+    return render_template('minimal_test.html')
 
 # Variabel input
 durasi = ctrl.Antecedent(np.arange(0,13,1), 'durasi')
