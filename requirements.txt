@@ -3,3 +3,5 @@ scikit-fuzzy
 numpy
 flask-cors
 scipy
+packaging
+packaging
